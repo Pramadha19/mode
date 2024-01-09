@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toggle Mode</title>
+  <style>
+    body {
+      transition: background-color 0.5s;
+      color:rgb(0, 0, 0);
+    }
+    .dark-mode {
+      background-color: #010101;
+      color: #ffffff;
+    }
+    .toggle-container {
+      width: 100px;
+      height: 40px;
+      /* background-color: #222; */
+      /* background: url("day-and-night.png"); */
+      border-radius: 30px 30px 30px 30px; 
+      margin: 20px auto;
+      margin-top: 70px;
+      position: relative;
+    }
+      .toggle-container img{
+      object-fit: cover;
+      width: 100px;
+      height: 40px;
+    }
+    .circle {
+      position: absolute;
+      background-color: white;
+      border-radius: 50%;
+      top: 5%;
+      left: 3%;
+      width: 35px;
+      height: 35px;
+      transition: left 0.5s; 
+    }
+    .circle.move-right {
+      left: 68%; 
+    }
+    h1{
+        font-size: 5rem;
+        margin: 100px auto;
+        text-align: center;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <div class="toggle-container" onclick="toggleMode()">
+    <img src="day-and-night.png" alt="day-and-night">
+    <div class="circle"></div>
+  </div>
+  <h1>Click on the Toggle Button</h1>
+  <script src="script.js">
+    </script>
+</body>
+</html>
